@@ -1,3 +1,4 @@
+# расчет груза при заданных параметрах
 def load_params(l: int, w: int, m: int):
     total_mass = 0
     number_load = 0
