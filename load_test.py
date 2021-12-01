@@ -3,9 +3,9 @@ def load_params(l: int, w: int, m: int):
     total_mass = 0
     number_load = 0
     while True:
-        load_l = int(input('введите длину : '))
-        load_w = int(input('введите ширину : '))
-        load_m = int(input('введите массу : '))
+        load_l = float(input('введите длину : '))
+        load_w = float(input('введите ширину : '))
+        load_m = float(input('введите массу : '))
         load_params = load_l * load_w
         total_mass += load_m
         if load_params < (l * w) and total_mass < m:
