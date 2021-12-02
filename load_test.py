@@ -12,7 +12,8 @@ def load_params(l: int, w: int, h: int, m: int):
         total_mass += load_m
         print('общая масса : ', total_mass)
         total_height += load_h
-        if load_l < l and load_w < w and load_h < total_height:
+        print('общая высота : ', total_height)
+        if total_mass < m and total_height < h:
             number_load += 1
             l_1.append([load_l, load_w, load_h])
             print('количество мест', number_load, 'список', l_1)
