@@ -3,27 +3,23 @@ def load_params(l: int, w: int, h: int, m: int):
     total_mass = 0
     number_load = 0
     total_height = 0
+    l_1 = []
     while True:
         load_l = float(input('введите длину : '))
         load_w = float(input('введите ширину : '))
         load_h = float(input('введите высоту груза : '))
         load_m = float(input('введите массу : '))
-        load_params = load_l * load_w
         total_mass += load_m
         print('общая масса : ', total_mass)
         total_height += load_h
-        if total_mass > m:
-            print('превышена масса груза')
-        elif load_params > (l * w):
-            print('превышены габариты груза')
-            break
-        elif total_height > h:
-            print('превышена погрузочная высота')
-            break
-        else:
+        if load_l < l and load_w < w and load_h < total_height:
             number_load += 1
-        
-    return total_mass, number_load
+            l_1.append([load_l, load_w, load_h])
+            print('количество мест', number_load, 'список', l_1)
+        else:
+            print(" превышение параметров")
+            break
+    return l_1, number_load
 
 
 if __name__ == '__main__':
