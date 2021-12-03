@@ -4,6 +4,9 @@ def load_params(l: int, w: int, h: int, m: int):
     number_load = 0
     total_height = 0
     l_1 = []
+    l_2 = []
+    l_3 = []
+    dict_1 = {}
     while True:
         load_l = float(input('введите длину : '))
         load_w = float(input('введите ширину : '))
@@ -17,11 +20,13 @@ def load_params(l: int, w: int, h: int, m: int):
             number_load += 1
             l_1.append([load_l, load_w, load_h])
             for elems in range(len(l_1)):
-                print(elems, '=', l_1[elems])
+                l_2.append(elems)
+                l_3.append(l_1[elems])
+                dict_1 = dict(zip(l_2, l_3))
         else:
             print(" превышение параметров")
             break
-    return l_1, number_load
+    return dict_1
 
 
 if __name__ == '__main__':
