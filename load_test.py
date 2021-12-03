@@ -16,7 +16,8 @@ def load_params(l: int, w: int, h: int, m: int):
         if total_mass < m and total_height < h:
             number_load += 1
             l_1.append([load_l, load_w, load_h])
-            print('количество мест', number_load, 'список', l_1)
+            for elems in range(len(l_1)):
+                print(elems, '=', l_1[elems])
         else:
             print(" превышение параметров")
             break
